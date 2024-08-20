@@ -14,6 +14,7 @@ import {
     Center,
 } from "@chakra-ui/react";
 import { MoonIcon, SunIcon } from "@chakra-ui/icons";
+import CartWidget from '../CartWidget/CartWidget';
 
 
 
@@ -26,7 +27,7 @@ const NavBar = () => {
         <>
             <Box bg={useColorModeValue("gray.100", "gray.900")} px={4}>
                 <Flex h={16} alignItems={"center"} justifyContent={"space-between"}>
-                    <Box>Kanguro 3D</Box>
+                    <Box>Logo</Box>
 
                     <Flex alignItems={"center"}>
                         <Stack direction={"row"} spacing={7}>
@@ -34,14 +35,15 @@ const NavBar = () => {
                                 {colorMode === "light" ? <MoonIcon /> : <SunIcon />}
                             </Button>
 
+                            <CartWidget /> {/* Aquí colocas el CartWidget */}
+
                             <Menu>
                                 <MenuButton
                                     as={Button}
                                     rounded={"full"}
                                     variant={"link"}
                                     cursor={"pointer"}
-                                    minW={0}
-                                >
+                                    minW={0}>
                                     <Avatar
                                         size={"sm"}
                                         src={"https://avatars.dicebear.com/api/male/username.svg"}
