@@ -1,22 +1,17 @@
-import React from 'react';
-import { Icon, Badge } from '@chakra-ui/react';
-import { FaShoppingCart } from 'react-icons/fa';
 
+import { Flex, Text } from "@chakra-ui/react";
+import { BsMinecart } from "react-icons/bs";
 
-const CartWidget = () => {
+export const CartWidget = () => {
   return (
-    <div style={{ position: 'relative' }}>
-      <Icon as={FaShoppingCart} w={6} h={6} />
-      <Badge 
-        style={{ position: 'absolute', top: '-1px', right: '-1px' }} 
-        borderRadius='full' 
-        px='2' 
-        colorScheme='red'>
-        3
-      </Badge>
-    </div>
+    <Flex
+      alignItems={"center"}
+      height={"100%"}
+      justifyContent={"space-between"}
+      width={"60px"}
+    >
+      <BsMinecart size={30} />
+      <Text fontSize={"1.5rem"}>0</Text>
+    </Flex>
   );
 };
-
-export default CartWidget;
-
