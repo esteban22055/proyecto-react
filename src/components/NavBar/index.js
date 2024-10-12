@@ -1,1 +1,1 @@
-export * from './NavBar';
+export * from './NavBar'; // exporta todo lo que se exporta en NavBar
